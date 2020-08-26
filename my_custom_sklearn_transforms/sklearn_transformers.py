@@ -41,7 +41,7 @@ class SmoteResample(object):
         X_resampled = pd.DataFrame(X_resampled, columns=X.columns)
         return X_resampled, y_resampled
 
-class MultiColumnLabelEncoder:
+class MultiColumnLabelEncoder(object):
 
     def __init__(self, columns=None):
         self.columns = columns # array of column names to encode
