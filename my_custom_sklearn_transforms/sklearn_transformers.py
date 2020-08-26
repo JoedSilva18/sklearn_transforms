@@ -78,9 +78,14 @@ class ScalerData():
     def __init__(self):
         pass
 
-    def fit(self, X):
+    def transform(self, X):
         scaler = StandardScaler()
         X_resampled = scaler.fit_transform(X)
         X_resampled = pd.DataFrame(X)
 
         return X_resampled
+
+    def fit(self, X):
+        return transform(self, X)
+
+
