@@ -47,7 +47,7 @@ class MultiColumnLabelEncoder:
         self.columns = columns # array of column names to encode
 
 
-    def fit(self, X, y=None):
+    def fit_transform(self, X, y=None):
         self.encoders = {}
         columns = X.columns if self.columns is None else self.columns
         for col in columns:
@@ -63,8 +63,8 @@ class MultiColumnLabelEncoder:
         return output
 
 
-    def fit_transform(self, X, y=None):
-        return self.fit(X,y).transform(X)
+    def fit(self, X, y=None):
+        return self.fit_transform(X,y).transform(X)
 
 
     def inverse_transform(self, X):
