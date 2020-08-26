@@ -85,7 +85,7 @@ class ScalerData():
 
         return X_resampled
 
-    def fit(self, X):
+    def fit(self, X, y=None):
         return transform(self, X)
 
 
