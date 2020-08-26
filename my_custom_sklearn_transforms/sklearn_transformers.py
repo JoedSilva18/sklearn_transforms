@@ -74,7 +74,7 @@ class MultiColumnLabelEncoder:
             output[col] = self.encoders[col].inverse_transform(X[col])
         return output
 
-class ScalerData():
+class ScalerData:
     def __init__(self):
         pass
 
